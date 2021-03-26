@@ -1,0 +1,16 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-template-areas:
+    "h h"
+    "m c";
+  padding: 2rem;
+  grid-gap: 1rem;
+  overflow: hidden;
+  .content {
+	grid-area: c;
+	background-color: #7a956b;
+	padding: 1rem;
+	}
+}

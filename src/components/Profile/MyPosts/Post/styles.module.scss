@@ -1,0 +1,15 @@
+.post {
+	display: flex;
+	align-items: center;
+	margin: 0 0 1rem 0;
+	.ava {
+		border-radius: 50%;
+		width: 1.5rem;
+		height: 1.5rem;
+		background-color: green;
+		margin: 0 0.5rem 0 0;
+	}
+	.likes {
+		margin: 0 0 0 1rem;
+	}
+}
