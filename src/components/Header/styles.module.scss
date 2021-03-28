@@ -1,4 +1,12 @@
 .header {
 	grid-area: h;
 	background-color: #794f45;
+	display: flex;
+	align-items: center;
+	img{
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		padding: 1rem;
+	}
 }

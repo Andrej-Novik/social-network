@@ -8,7 +8,7 @@ const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING"
 let initialState = {
 	users: [],
 	pageSize: 5,
-	totalUsersCount: 0,
+	totalUsersCount: 30,
 	currentPage: 1,
 	isFetching: false
 }
@@ -62,11 +62,11 @@ const dialogsReducer = (state = initialState, action) => {
 	}
 }
 
-export const setUsersCreator = (users) => ({type: SET_USERS, users})
-export const followCreator = (userId) => ({ type: FOLLOW, userId })
-export const unfollowCreator = (userId) => ({type: UNFOLLOW, userId})
-export const setCurrentPageCreator = (currentPage) => ({ type: SET_CURRENT_PAGE, currentPage })
-export const setUsersTotalCountCreator = (totalUsersCount) => ({ type: SET_TOTAL_USERS_COUNT, count: totalUsersCount })
-export const toggleIsFetchingCreator = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching})
+export const setUsers = (users) => ({type: SET_USERS, users})
+export const follow = (userId) => ({ type: FOLLOW, userId })
+export const unfollow = (userId) => ({type: UNFOLLOW, userId})
+export const setCurrentPage = (currentPage) => ({ type: SET_CURRENT_PAGE, currentPage })
+export const setUsersTotalCount = (totalUsersCount) => ({ type: SET_TOTAL_USERS_COUNT, count: totalUsersCount })
+export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching})
 
 export default dialogsReducer

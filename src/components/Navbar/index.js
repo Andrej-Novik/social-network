@@ -5,22 +5,22 @@ const Navbar = () => {
 	return (
 		<nav className={styles.navbar}>
 			<div className={styles.link}>
-				<NavLink exact to="" activeClassName={styles.activeLink}>Profile</NavLink>
+				<NavLink to="/profile" activeClassName={styles.activeLink}>Profile</NavLink>
 			</div>
 			<div className={styles.link}>
-				<NavLink exact to="dialogs" activeClassName={styles.activeLink}>Messages</NavLink>
+				<NavLink to="/dialogs" activeClassName={styles.activeLink}>Messages</NavLink>
 			</div>
 			<div className={styles.link}>
-				<NavLink exact to="friends" activeClassName={styles.activeLink}>Friends</NavLink>
+				<NavLink to="/users" activeClassName={styles.activeLink}>Users</NavLink>
 			</div>
 			<div className={styles.link}>
-				<NavLink exact to="news" activeClassName={styles.activeLink}>News</NavLink>
+				<NavLink to="/news" activeClassName={styles.activeLink}>News</NavLink>
 			</div>
 			<div className={styles.link}>
-				<NavLink exact to="music" activeClassName={styles.activeLink}>Music</NavLink>
+				<NavLink to="/music" activeClassName={styles.activeLink}>Music</NavLink>
 			</div>
 			<div className={styles.link}>
-				<NavLink exact to="settings" activeClassName={styles.activeLink}>Settings</NavLink>
+				<NavLink to="/settings" activeClassName={styles.activeLink}>Settings</NavLink>
 			</div>
 		</nav>
 	)
