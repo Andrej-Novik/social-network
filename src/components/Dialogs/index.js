@@ -1,3 +1,4 @@
+import { Redirect } from "react-router"
 import Dialog from "./Dialog"
 import Message from "./Message"
 import styles from "./styles.module.scss"
@@ -18,6 +19,10 @@ const Dialogs = (props) => {
 	let changeMessage = (e) => {
 		let message = e.target.value
     props.updateNewMessageText(message)
+  }
+
+  if (!props.isAuth) {
+    return <Redirect to="/login" />
   }
 
 	return (
