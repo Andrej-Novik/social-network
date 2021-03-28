@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss"
 import userPhoto from "../../assets/img/user.png"
 import { NavLink } from "react-router-dom"
-import * as axios from "axios"
+import { usersAPI } from "../../api/api"
 
 let Users = (props) => {
 
@@ -36,43 +36,21 @@ let Users = (props) => {
 						<NavLink to={"/profile/" + user.id}>
 							<img src={ user.photos.small != null ? user.photos.small : userPhoto } alt=""/>
 						</NavLink>
+						
 						{user.followed
-							? <button disabled={props.followingInProgress.some(id => id === user.id)} onClick={() => {
-
-								props.toggleFollowingProgress(true, user.id)
-
-								axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
-									withCredentials: true,
-									headers: {
-										"API-KEY" : "a6e30923-46fd-47a5-9c72-35d46849af67"
-									}
-								})
-									.then(response => {
-										if (response.data.resultCode === 0) {
-											props.unfollow(user.id)
-										}
-										props.toggleFollowingProgress(false, user.id)
-									})
-
-							}}>Unfollow</button>
-							: <button disabled={props.followingInProgress.some(id => id === user.id)} onClick={() => {
-
-								props.toggleFollowingProgress(true, user.id)
-
-								axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {}, {
-									withCredentials: true,
-									headers: {
-										"API-KEY" : "a6e30923-46fd-47a5-9c72-35d46849af67"
-									}
-								})
-									.then(response => {
-										if (response.data.resultCode === 0) {
-											props.follow(user.id)
-										}
-										props.toggleFollowingProgress(false, user.id)
-									})
-
-							}}>Follow</button>
+							? <button
+									disabled={props.followingInProgress.some(id => id === user.id)}
+									onClick={() => { props.unfollow(user.id) }}
+								>
+									Unfollow
+								</button>
+							
+							: <button
+									disabled={props.followingInProgress.some(id => id === user.id)}
+									onClick={() => { props.follow(user.id) }}
+								>
+									Follow
+								</button>
 						}
 						<div className={styles.userInfo}>
 							<div className={styles.name}>
