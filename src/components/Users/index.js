@@ -1,7 +1,6 @@
 import styles from "./styles.module.scss"
 import userPhoto from "../../assets/img/user.png"
 import { NavLink } from "react-router-dom"
-import { usersAPI } from "../../api/api"
 
 let Users = (props) => {
 
@@ -36,7 +35,7 @@ let Users = (props) => {
 						<NavLink to={"/profile/" + user.id}>
 							<img src={ user.photos.small != null ? user.photos.small : userPhoto } alt=""/>
 						</NavLink>
-						
+
 						{user.followed
 							? <button
 									disabled={props.followingInProgress.some(id => id === user.id)}
