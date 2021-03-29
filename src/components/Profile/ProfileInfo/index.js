@@ -10,9 +10,9 @@ const ProfileInfo = (props) => {
 
 	return (
 		<div className={styles.info}>
-			<img src={props.profile.photos.large} alt="" />
+			<img src={props.profile.photos.large} alt="ptoto" />
 			<br />
-			<ProfileStatus status={ "hello"}/>
+			<ProfileStatus status={ props.status} updateStatus={props.updateStatus}/>
 		</div>
 	)
 }
