@@ -1,5 +1,6 @@
 import styles from "./styles.module.scss"
 import Preloader from "../../common/Preloader"
+import ProfileStatus from "./ProfileStatus"
 
 const ProfileInfo = (props) => {
 
@@ -11,7 +12,7 @@ const ProfileInfo = (props) => {
 		<div className={styles.info}>
 			<img src={props.profile.photos.large} alt="" />
 			<br />
-			ava + description
+			<ProfileStatus status={ "hello"}/>
 		</div>
 	)
 }

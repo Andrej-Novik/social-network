@@ -7,7 +7,7 @@ const Dialogs = (props) => {
 
   let state = props.dialogsPage
 
-	let dialogsList = state.dialogs.map(dialog => <Dialog name={dialog.name} id={dialog.id} key={dialog.id}/>);
+  let dialogsList = state.dialogs.map(dialog => <Dialog name={dialog.name} id={dialog.id} key={dialog.id}/>);
   let messagesList = state.messages.map(message => <Message message={message.message} key={message.id} />);
   let newMessageText = state.newMessageText
 
@@ -19,10 +19,6 @@ const Dialogs = (props) => {
 	let changeMessage = (e) => {
 		let message = e.target.value
     props.updateNewMessageText(message)
-  }
-
-  if (!props.isAuth) {
-    return <Redirect to="/login" />
   }
 
 	return (
@@ -43,5 +39,6 @@ const Dialogs = (props) => {
 		</div>
 	)
 }
+
 
 export default Dialogs
