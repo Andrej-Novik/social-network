@@ -5,7 +5,7 @@ const Input = ({ input, meta, ...props }) => {
 	return (
 		<div className={styles.formControl + " " + (showError ? styles.error : "")}>
 			<input {...input} {...props} />
-			<br></br>
+			<br />
 			{ showError && <span>{meta.error}</span>}
 		</div>
 	)

@@ -1,14 +1,15 @@
 .navbar {
-	grid-area: m;
-	background-color: #77608d;
-	padding: 1rem;
 	display: flex;
 	flex-direction: column;
+	text-align: center;
+	margin: 2rem 0 0 0;
+	padding: 0 4rem 0 2.5rem;
+
 	.link {
-		color: #fff;
 		margin: 0 0 2rem 0;
+		font-size: 1.2rem;
 	}
 	a.activeLink {
-		color: #000;
+		color: red;
 	}
 }

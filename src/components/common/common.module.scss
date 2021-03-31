@@ -5,12 +5,14 @@
 }
 .formControl {
 	span {
-		color: rgb(160, 27, 27);
+		color: red;
+	}
+	input {
+		border: none;
 	}
 }
 
 .error input,
 .error textarea {
 	border: 2px solid red;
-	background-color: grey;
 }

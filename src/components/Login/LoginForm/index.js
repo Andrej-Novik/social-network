@@ -6,17 +6,17 @@ import styles from "./styles.module.scss"
 const LoginForm = (props) => {
    return (
       <form className={styles.form} onSubmit={props.handleSubmit}>
-         <div>
-				<Field placeholder={"Login"} name={"login"} component={Input} validate={[required]}/>
+         <div className={styles.input}>
+				<Field placeholder={"Email"} name={"email"} component={Input} validate={[required]}/>
          </div>
-         <div>
-            <Field placeholder={"Password"} name={"password"} component={Input} validate={[required]}/>
+         <div className={styles.input}>
+            <Field placeholder={"Password"} name={"password"} type="password" component={Input} validate={[required]}/>
          </div>
-         <label>
+         <div className={styles.checkbox}>
 				<Field component={Input} name={"rememberMe"} type={"checkbox"} validate={[required]} />
-				<span>remember me</span>
-         </label>
-         <div>
+				<span className={styles.remember}>remember me</span>
+         </div>
+         <div className={styles.button}>
             <button>Login</button>
          </div>
       </form>

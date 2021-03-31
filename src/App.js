@@ -11,12 +11,14 @@ const App = () => {
 	return (
 		<div className={styles.wrapper}>
 			<HeaderContainer />
-			<Navbar />
-			<div className={styles.content}>
-				<Route path="/profile/:userId?" render={ () => <ProfileContainer /> }/>
-				<Route path="/dialogs" render={ () => <DialogsContainer /> }/>
-				<Route path="/users" render={ () => <UsersContainer /> }/>
-				<Route path="/login" render={ () => <LoginPage /> }/>
+			<div className={styles.page}>
+				<Navbar />
+				<div className={styles.content}>
+					<Route path="/profile/:userId?" render={ () => <ProfileContainer /> }/>
+					<Route path="/dialogs" render={ () => <DialogsContainer /> }/>
+					<Route path="/users" render={ () => <UsersContainer /> }/>
+					<Route path="/login" render={ () => <LoginPage /> }/>
+				</div>
 			</div>
 		</div>
 	);
