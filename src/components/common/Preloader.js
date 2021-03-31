@@ -1,9 +1,9 @@
 import loader from "../../assets/img/loader.gif"
-import "../../assets/styles.scss"
+import styles from "./common.module.scss"
 
 let Preloader = (props) => {
 	return (
-		<img className="loader" src={ loader } alt=""/>
+		<img className={styles.loader} src={ loader } alt=""/>
 	)
 }
 

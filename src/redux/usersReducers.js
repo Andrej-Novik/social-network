@@ -18,7 +18,6 @@ let initialState = {
 }
 
 const dialogsReducer = (state = initialState, action) => {
-
 	switch (action.type) {
 		case FOLLOW:
 			return {
@@ -29,8 +28,7 @@ const dialogsReducer = (state = initialState, action) => {
 					}
 					return user
 				})],
-			}
-			
+			}	
 		case UNFOLLOW:
 			return {
 				...state,
@@ -65,9 +63,9 @@ const dialogsReducer = (state = initialState, action) => {
 			return {
 				...state,
 				followingInProgress: action.isFetching
-					 ? [...state.followingInProgress, action.userId]
-					 : state.followingInProgress.filter(id => id !== action.userId)
-		  }
+					? [...state.followingInProgress, action.userId]
+					: state.followingInProgress.filter(id => id !== action.userId)
+			}
 		default:
 			return state
 	}
@@ -84,9 +82,7 @@ export const toggleFollowingProgress = (isFetching, userId) => ({ type: TOGGLE_I
 
 export const getUsers = (currentPage, pageSize) => {
 	return (dispatch) => {
-
 		dispatch(toggleIsFetching(true))
-
 		usersAPI.getUsers(currentPage, pageSize).then(data => {
 			dispatch(toggleIsFetching(false))
 			dispatch(setUsers(data.items))
@@ -97,7 +93,6 @@ export const getUsers = (currentPage, pageSize) => {
 
 export const follow = (userId) => {
 	return (dispatch) => {
-
 		dispatch(toggleFollowingProgress(true, userId))
 		usersAPI.follow(userId)								
 			.then(response => {
@@ -111,7 +106,6 @@ export const follow = (userId) => {
 
 export const unfollow = (userId) => {
 	return (dispatch) => {
-
 		dispatch(toggleFollowingProgress(true, userId))
 		usersAPI.unfollow(userId)								
 			.then(response => {

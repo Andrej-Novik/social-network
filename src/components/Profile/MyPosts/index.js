@@ -1,37 +1,19 @@
 import Post from "./Post"
 import styles from "./styles.module.scss"
 import React from "react"
+import AddPostForm from "./AddPostsForm"
 
 const MyPosts = (props) => {
 	let postsList = props.posts.map(post =>
 		<Post post={post.text} likes={post.likes} key={post.id} />
 	)
-	let newPostText = props.newPostText
-
-	let newPost = React.createRef()
-
-	let onAddPost = () => {
-		if (newPostText) {
-			props.addPost()	
-		}
+	let addNewMPost = (value) => {
+		props.addPost(value.newPost)
 	}
-
-	let onPostChange = () => {
-		let text = newPost.current.value
-		props.updateNewPostText(text)
-	}
-
 	return (
 		<div>
 			<h3>Posts</h3>
-			<div className={ styles.addPosts }>
-				<textarea
-					onChange={onPostChange}
-					ref={newPost}
-					value={newPostText} />
-				<br />
-				<button onClick={ onAddPost }>Add post</button>
-			</div>
+			<AddPostForm onSubmit={ addNewMPost }/>
 			<div className={styles.posts}>
 				{ postsList }
 			</div>

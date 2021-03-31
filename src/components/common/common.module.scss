@@ -1,0 +1,16 @@
+.loader {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+}
+.formControl {
+	span {
+		color: rgb(160, 27, 27);
+	}
+}
+
+.error input,
+.error textarea {
+	border: 2px solid red;
+	background-color: grey;
+}

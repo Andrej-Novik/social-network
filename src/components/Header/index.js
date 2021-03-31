@@ -13,7 +13,7 @@ const Header = (props) => {
 						: <NavLink to="/login" className={styles.link}>login</NavLink>
 				}
 			</div>
-	 </header>
+		</header>
 	)
 }
 

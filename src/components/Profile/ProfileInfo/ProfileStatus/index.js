@@ -2,12 +2,10 @@ import React from "react"
 import styles from "./styles.module.scss"
 
 class ProfileStatus extends React.Component {
-
 	state = {
 		editMode: false,
 		status: this.props.status
 	}
-
 	activateEditMode = () => {
 		this.setState({
 			editMode: true
@@ -23,7 +21,6 @@ class ProfileStatus extends React.Component {
 		this.setState({
 			status: e.currentTarget.value
 		})
-		
 	}
 	componentDidUpdate(prevProps, prevState) {
 		if (prevProps.status !== this.props.status) {
@@ -32,8 +29,6 @@ class ProfileStatus extends React.Component {
 			})
 		}
 	}
-	
-
 	render() {
 		return (
 			<div>
@@ -46,7 +41,6 @@ class ProfileStatus extends React.Component {
 			</div>
 		)
 	}
-	
 }
 
 export default ProfileStatus

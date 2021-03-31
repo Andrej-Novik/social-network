@@ -8,18 +8,18 @@ import HeaderContainer from './components/Header/HeaderContainer';
 import LoginPage from './components/Login';
 
 const App = () => {
-  return (
-      <div className={styles.wrapper}>
-        <HeaderContainer />
-        <Navbar />
-        <div className={styles.content}>
-            <Route path="/profile/:userId?" render={ () => <ProfileContainer /> }/>
-            <Route path="/dialogs" render={ () => <DialogsContainer /> }/>
-            <Route path="/users" render={ () => <UsersContainer /> }/>
+	return (
+		<div className={styles.wrapper}>
+			<HeaderContainer />
+			<Navbar />
+			<div className={styles.content}>
+				<Route path="/profile/:userId?" render={ () => <ProfileContainer /> }/>
+				<Route path="/dialogs" render={ () => <DialogsContainer /> }/>
+				<Route path="/users" render={ () => <UsersContainer /> }/>
 				<Route path="/login" render={ () => <LoginPage /> }/>
-        </div>
-      </div>
-  );
+			</div>
+		</div>
+	);
 }
 
 export default App;
