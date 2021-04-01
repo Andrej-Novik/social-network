@@ -13,9 +13,12 @@ const LoginForm = (props) => {
             <Field placeholder={"Password"} name={"password"} type="password" component={Input} validate={[required]}/>
          </div>
          <div className={styles.checkbox}>
-				<Field component={Input} name={"rememberMe"} type={"checkbox"} validate={[required]} />
+				<Field component={Input} name={"rememberMe"} type={"checkbox"} />
 				<span className={styles.remember}>remember me</span>
-         </div>
+			</div>
+			{ props.error && <span className={styles.formSummaryError}>
+				{props.error}
+			</span>}
          <div className={styles.button}>
             <button>Login</button>
          </div>

@@ -8,9 +8,17 @@ const ProfileInfo = (props) => {
 	}
 	return (
 		<div className={styles.info}>
-			<img src={props.profile.photos.large} alt="ptoto" />
-			<br />
-			<ProfileStatus status={ props.status} updateStatus={props.updateStatus}/>
+			<img src={props.profile.photos.large} alt="" className={styles.photo} />
+			{
+				props.profile.photos.large
+				?
+					<ProfileStatus status={ props.status} updateStatus={props.updateStatus}/>	
+				:
+					<div className={styles.noPhoto}>
+						<ProfileStatus status={ props.status} updateStatus={props.updateStatus}/>
+					</div>
+			}
+			
 		</div>
 	)
 }

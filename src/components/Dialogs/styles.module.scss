@@ -1,4 +1,6 @@
 .dialogs {
-	display: grid;
-	grid-template-columns: 2fr 10fr;
+	display: flex;
+	.peaple {
+		padding: 0 4rem 0 0;
+	}
 }

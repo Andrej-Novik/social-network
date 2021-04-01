@@ -8,4 +8,19 @@
 a {
 	color: inherit;
 }
-
+button{
+	font-size: 1rem;
+	border: none;
+	width: 5rem;
+	height: 1.8rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	background-color: #edeef0;
+}
+textarea {
+	width: 10rem;
+	height: 2.5rem;
+	font-size: 1.1rem;
+	resize: none;
+	padding: 0.5rem;
+}

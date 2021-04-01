@@ -7,7 +7,7 @@ const maxLength50 = maxLengthCreator(50)
 const AddMessageForm = (props) => {
 	return (
 		<form onSubmit={props.handleSubmit}>
-			<Field name="newMessage" placeholder="Enter your message" validate={[required, maxLength50]} component={Textarea} />
+			<Field name="newMessage" validate={[required, maxLength50]} component={Textarea} />
 			<br />
 			<button>Send</button>
 		</form>
