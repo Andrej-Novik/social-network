@@ -3,7 +3,6 @@ import { follow, unfollow, setCurrentPage, toggleFollowingProgress, getUsers } f
 import Users from "."
 import React from "react"
 import Preloader from "../common/Preloader"
-import { compose } from "redux"
 import { getPagaSize, getStateUsers, getTotalUsersCount, getCurrentPage, getIsFetching, getFollowingInProgress } from "../../redux/usersSelectors"
 
 class UsersContainer extends React.Component {

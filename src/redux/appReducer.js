@@ -1,4 +1,3 @@
-import { authAPI } from "../api/api"
 import { getAuthData } from "./authReducer"
 
 const SET_INITIALIZING = "SET_INITIALIZING"
